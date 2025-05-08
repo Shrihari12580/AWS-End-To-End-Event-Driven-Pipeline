@@ -1,13 +1,13 @@
 
 # AWS-End-To-End-Event-Driven-Pipeline
 
-# The problem statement :-
+# The problem statement :
 Conventional ETL pipelines have trouble with loose connection between components, failover handling, and real-time data ingestion.  
 Manual triggers lead to tight integration, poor error recovery, and delay.  
 In order to react to new data arrivals in almost real-time, organizations require a scalable and event-driven architecture
 that has strong error handling and automation techniques.
 
-# Objective :-
+# Objective :
 •	Using AWS services create and deploy a serverless, event-driven data pipeline that:- Sends event alerts to S3 to import data.
 
 •	It is processed using ETL pipeline. AWS Glue is used to automate metadata management. Allows for Athena querying. 
@@ -15,7 +15,7 @@ that has strong error handling and automation techniques.
 •	Puts in place notifications, retries, and error handling.
 
 
-# Solution Architecture workflow :- 
+# Solution Architecture workflow :
 
 1.	s3 source bucket :- File uploads in s3 bucket which cause an event to occur.
 
@@ -42,7 +42,7 @@ that has strong error handling and automation techniques.
 12.	Notification via email  Lambda: Uses SES or a comparable system to send email warnings.
 
 
-# Key Focus Area :-
+# Key Focus Area :
 
 •	Event-Driven Triggers :- S3, SNS, Lambda, and EventBridge are the main areas of focus.
 
@@ -54,7 +54,7 @@ that has strong error handling and automation techniques.
 
 •	Observation and Monitoring :- Email notifications of malfunctions through Lambda and SNS.
 
-# AWS Tools & Services Used:
+# AWS Tools & Services Used :
 
 •	Storage :- Amazon S3
 
