@@ -1,0 +1,21 @@
+-- Fetching all records.
+SELECT * FROM "edp-db"."orders" limit 10;
+
+-- SQL query to find the maximum salary among all employees whose occupation is 'HR'.
+select max(salary) from "edp-db"."orders" where occupation = 'HR';
+
+-- SQL query to find the average salary of the students whose names are either 'Sita', 'Kirti', or 'Amit'
+select avg(salary) from "edp-db"."orders" where name in ('Sita','Kirti', 'Amit') 
+
+-- SQL query to Retrieve all students whose salary is between 30,000 and 50,000 (inclusive).
+-- Sort the results in ascending order by name.
+select * from "edp-db"."orders"  where salary between 30000 and 50000 order by name asc
+
+-- SQL query to Find the minimum salary for each occupation.
+-- Return the result with columns: occupation and the minimum salary as new_salary.
+select occupation, min (salary) as new_salary from "edp-db"."orders" group by occupation
+
+-- SQL query to Retrieve the occupation and the maximum salary for students whose occupation is 'finance'
+-- Only include results where the maximum salary is greater than 35,000.
+select occupation , max(salary) from "edp-db"."orders" where occupation = 'Finance' group by occupation  having max(salary)>35000;
+
